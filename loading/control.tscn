@@ -1,42 +1,136 @@
-[gd_scene format=3 uid="uid://bdrbgaes7o1mu"]
+﻿[gd_scene format=3 uid="uid://bdrbgaes7o1mu"]
 
-[ext_resource type="Texture2D" uid="uid://tq8fq6pl0qie" path="res://loading/icon.svg" id="1_jptfa"]
-[ext_resource type="Script" uid="uid://ckb35w4u5kyeh" path="res://loading/progress_bar/progress_bar.gd" id="1_vjmxb"]
+[ext_resource type="Script" uid="uid://b4kfpqt2xmv3l" path="res://loading/loading.gd" id="1_ldgd"]
+[ext_resource type="Script" uid="uid://ckb35w4u5kyeh" path="res://loading/progress_bar/progress_bar.gd" id="2_pbgd"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_axh5k"]
-font_size = 68
+[sub_resource type="StyleBoxFlat" id="SBF_pbBg"]
+bg_color = Color(0.086, 0.153, 0.051, 1.0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.29, 0.486, 0.145, 0.7)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
 
-[node name="Node2D2" type="Node2D" unique_id=1219138125]
+[sub_resource type="StyleBoxFlat" id="SBF_pbFill"]
+bg_color = Color(0.29, 0.486, 0.145, 1.0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
 
-[node name="Panel" type="Panel" parent="." unique_id=1073051725]
-offset_left = -10.0
-offset_top = -12.0
-offset_right = 1161.0
-offset_bottom = 664.0
+[sub_resource type="LabelSettings" id="LS_title"]
+font_size = 112
+font_color = Color(0.29, 0.486, 0.145, 1.0)
 
-[node name="Label" type="Label" parent="." unique_id=348885375]
-offset_left = 310.0
-offset_top = 260.0
-offset_right = 971.0
-offset_bottom = 353.0
-text = "Saaw tower defence"
-label_settings = SubResource("LabelSettings_axh5k")
+[sub_resource type="LabelSettings" id="LS_subtitle"]
+font_size = 34
+font_color = Color(0.741, 0.765, 0.78, 1.0)
 
-[node name="Label2" type="Label" parent="." unique_id=251573287]
-offset_right = 172.0
-offset_bottom = 23.0
-text = "SAAW DEV BUILD 0.1"
+[sub_resource type="LabelSettings" id="LS_tagline"]
+font_size = 17
+font_color = Color(0.275, 0.435, 0.188, 1.0)
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1206888989]
-offset_left = 100.0
-offset_top = 220.0
-offset_right = 279.99997
-offset_bottom = 400.0
-texture = ExtResource("1_jptfa")
+[sub_resource type="LabelSettings" id="LS_tip"]
+font_size = 16
+font_color = Color(0.42, 0.62, 0.33, 1.0)
 
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1206577741]
-offset_left = 122.0
-offset_top = 442.0
-offset_right = 1022.0
-offset_bottom = 542.0
-script = ExtResource("1_vjmxb")
+[sub_resource type="LabelSettings" id="LS_version"]
+font_size = 13
+font_color = Color(0.275, 0.36, 0.247, 1.0)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_ldgd")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.051, 0.122, 0.059, 1.0)
+
+[node name="AccentTop" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 2.0
+color = Color(0.29, 0.486, 0.145, 0.55)
+
+[node name="AccentBottom" type="ColorRect" parent="."]
+layout_mode = 1
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+color = Color(0.29, 0.486, 0.145, 0.55)
+
+[node name="Title" type="Label" parent="."]
+offset_left = 70.0
+offset_top = 90.0
+offset_right = 700.0
+offset_bottom = 215.0
+text = "SAAW"
+label_settings = SubResource("LS_title")
+
+[node name="Subtitle" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 213.0
+offset_right = 570.0
+offset_bottom = 255.0
+text = "TOWER DEFENCE"
+label_settings = SubResource("LS_subtitle")
+
+[node name="Tagline" type="Label" parent="."]
+offset_left = 78.0
+offset_top = 263.0
+offset_right = 570.0
+offset_bottom = 288.0
+text = "// AIR DEFENCE COMMAND SYSTEM"
+label_settings = SubResource("LS_tagline")
+
+[node name="Separator" type="ColorRect" parent="."]
+offset_left = 70.0
+offset_top = 388.0
+offset_right = 1082.0
+offset_bottom = 390.0
+color = Color(0.29, 0.486, 0.145, 0.3)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 70.0
+offset_top = 408.0
+offset_right = 1082.0
+offset_bottom = 442.0
+theme_override_styles/background = SubResource("SBF_pbBg")
+theme_override_styles/fill = SubResource("SBF_pbFill")
+show_percentage = false
+script = ExtResource("2_pbgd")
+
+[node name="TipLabel" type="Label" parent="."]
+offset_left = 70.0
+offset_top = 458.0
+offset_right = 1082.0
+offset_bottom = 482.0
+text = "TIP: ..."
+label_settings = SubResource("LS_tip")
+
+[node name="VersionLabel" type="Label" parent="."]
+offset_left = 70.0
+offset_top = 612.0
+offset_right = 450.0
+offset_bottom = 632.0
+text = "SAAW TOWER DEFENCE  |  v0.1 DEV BUILD"
+label_settings = SubResource("LS_version")
+
+[node name="FadeOverlay" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.0, 0.0, 0.0, 1.0)
+mouse_filter = 2
