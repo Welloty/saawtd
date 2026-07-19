@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://553srrlrpt1l"]
+
+[ext_resource type="Texture2D" uid="uid://ci4vl08fuctkj" path="res://icon.svg" id="1_53q0u"]
+
+[node name="Node2D" type="Node2D" unique_id=145980075]
+
+[node name="LinkButton" type="LinkButton" parent="." unique_id=783994069]
+anchors_preset = -1
+anchor_right = 0.035
+anchor_bottom = 0.062000003
+offset_left = 1023.0
+offset_top = 518.0
+offset_right = 1102.68
+offset_bottom = 597.824
+uri = "http://localhost:8080/"
+
+[node name="TextureRect" type="TextureRect" parent="LinkButton" unique_id=1823769378]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+anchor_bottom = 0.031000001
+offset_right = 125.96
+offset_bottom = 124.28
+texture = ExtResource("1_53q0u")
+
+[node name="OptionButton" type="OptionButton" parent="." unique_id=1827338580]
+offset_left = 337.0
+offset_top = 219.0
+offset_right = 811.0
+offset_bottom = 356.0

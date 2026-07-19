@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bdrbgaes7o1mu"]
+
+[ext_resource type="Texture2D" uid="uid://tq8fq6pl0qie" path="res://loading/icon.svg" id="1_jptfa"]
+[ext_resource type="Script" uid="uid://ckb35w4u5kyeh" path="res://loading/progress_bar/progress_bar.gd" id="1_vjmxb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_axh5k"]
+font_size = 68
+
+[node name="Node2D2" type="Node2D" unique_id=1219138125]
+
+[node name="Panel" type="Panel" parent="." unique_id=1073051725]
+offset_left = -10.0
+offset_top = -12.0
+offset_right = 1161.0
+offset_bottom = 664.0
+
+[node name="Label" type="Label" parent="." unique_id=348885375]
+offset_left = 310.0
+offset_top = 260.0
+offset_right = 971.0
+offset_bottom = 353.0
+text = "Saaw tower defence"
+label_settings = SubResource("LabelSettings_axh5k")
+
+[node name="Label2" type="Label" parent="." unique_id=251573287]
+offset_right = 172.0
+offset_bottom = 23.0
+text = "SAAW DEV BUILD 0.1"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1206888989]
+offset_left = 100.0
+offset_top = 220.0
+offset_right = 279.99997
+offset_bottom = 400.0
+texture = ExtResource("1_jptfa")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1206577741]
+offset_left = 122.0
+offset_top = 442.0
+offset_right = 1022.0
+offset_bottom = 542.0
+script = ExtResource("1_vjmxb")
