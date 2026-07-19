@@ -21,7 +21,7 @@ func _ready() -> void:
 	subtitle_label.modulate.a = 0.0
 	tagline_label.modulate.a = 0.0
 	tip_label.modulate.a = 0.0
-	tip_label.text = "TIP:  " + tips[randi() % tips.size()]
+	tip_label.text = tr("TIP_PREFIX") + tr(tips[randi() % tips.size()])
 
 	var tween := create_tween().set_parallel(true)
 	tween.tween_property(fade_overlay, "modulate:a", 0.0, 0.8).set_ease(Tween.EASE_OUT)
@@ -39,5 +39,5 @@ func _ready() -> void:
 func _cycle_tip() -> void:
 	var tween := create_tween()
 	tween.tween_property(tip_label, "modulate:a", 0.0, 0.3)
-	tween.tween_callback(func(): tip_label.text = "TIP:  " + tips[randi() % tips.size()])
+	tween.tween_callback(func(): tip_label.text = tr("TIP_PREFIX") + tr(tips[randi() % tips.size()]))
 	tween.tween_property(tip_label, "modulate:a", 1.0, 0.4)

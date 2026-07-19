@@ -15,10 +15,18 @@ run/main_scene="res://loading/control.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://loading/icon.svg"
 
+[autoload]
+
+SettingsManager="*res://settings_manager.gd"
+
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://locale/translations.en.translation", "res://locale/translations.ru.translation")
 
 [physics]
 
