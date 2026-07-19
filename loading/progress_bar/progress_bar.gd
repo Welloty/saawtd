@@ -1,4 +1,4 @@
-﻿extends ProgressBar
+extends ProgressBar
 
 var done: bool = false
 
@@ -9,7 +9,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if done:
 		return
-	value += 20 * delta
+	value += 25 * delta
 	if value >= max_value:
 		done = true
 		_finish_loading()

@@ -1,3 +1,26 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+#android
+*.keystore
+*.jks
+split_build_log.txt
+
+#game
+*.apk
+*.aab
+*.exe
+*.zip
+export/
+build/
+
+#local settings
+.godot.editor.state*
+
+#other
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp

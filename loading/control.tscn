@@ -1,10 +1,22 @@
-﻿[gd_scene format=3 uid="uid://bdrbgaes7o1mu"]
+[gd_scene format=3 uid="uid://4y75ovufogdq"]
 
 [ext_resource type="Script" uid="uid://b4kfpqt2xmv3l" path="res://loading/loading.gd" id="1_ldgd"]
 [ext_resource type="Script" uid="uid://ckb35w4u5kyeh" path="res://loading/progress_bar/progress_bar.gd" id="2_pbgd"]
 
+[sub_resource type="LabelSettings" id="LS_title"]
+font_size = 112
+font_color = Color(0.29, 0.486, 0.145, 1)
+
+[sub_resource type="LabelSettings" id="LS_subtitle"]
+font_size = 34
+font_color = Color(0.741, 0.765, 0.78, 1)
+
+[sub_resource type="LabelSettings" id="LS_tagline"]
+font_size = 17
+font_color = Color(0.275, 0.435, 0.188, 1)
+
 [sub_resource type="StyleBoxFlat" id="SBF_pbBg"]
-bg_color = Color(0.086, 0.153, 0.051, 1.0)
+bg_color = Color(0.086, 0.153, 0.051, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -16,61 +28,53 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
 [sub_resource type="StyleBoxFlat" id="SBF_pbFill"]
-bg_color = Color(0.29, 0.486, 0.145, 1.0)
+bg_color = Color(0.29, 0.486, 0.145, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="LabelSettings" id="LS_title"]
-font_size = 112
-font_color = Color(0.29, 0.486, 0.145, 1.0)
-
-[sub_resource type="LabelSettings" id="LS_subtitle"]
-font_size = 34
-font_color = Color(0.741, 0.765, 0.78, 1.0)
-
-[sub_resource type="LabelSettings" id="LS_tagline"]
-font_size = 17
-font_color = Color(0.275, 0.435, 0.188, 1.0)
-
-[sub_resource type="LabelSettings" id="LS_tip"]
-font_size = 16
-font_color = Color(0.42, 0.62, 0.33, 1.0)
+[sub_resource type="LabelSettings" id="LabelSettings_vjmxb"]
 
 [sub_resource type="LabelSettings" id="LS_version"]
 font_size = 13
-font_color = Color(0.275, 0.36, 0.247, 1.0)
+font_color = Color(0.275, 0.36, 0.247, 1)
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=1878256517]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_ldgd")
 
-[node name="BG" type="ColorRect" parent="."]
+[node name="BG" type="ColorRect" parent="." unique_id=1013063409]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0.051, 0.122, 0.059, 1.0)
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.051, 0.122, 0.059, 1)
 
-[node name="AccentTop" type="ColorRect" parent="."]
+[node name="AccentTop" type="ColorRect" parent="." unique_id=1960384650]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 2.0
 color = Color(0.29, 0.486, 0.145, 0.55)
 
-[node name="AccentBottom" type="ColorRect" parent="."]
+[node name="AccentBottom" type="ColorRect" parent="." unique_id=396675853]
 layout_mode = 1
-anchor_left = 0.0
+anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -2.0
 color = Color(0.29, 0.486, 0.145, 0.55)
 
-[node name="Title" type="Label" parent="."]
+[node name="Title" type="Label" parent="." unique_id=1065495290]
+layout_mode = 0
 offset_left = 70.0
 offset_top = 90.0
 offset_right = 700.0
@@ -78,7 +82,8 @@ offset_bottom = 215.0
 text = "SAAW"
 label_settings = SubResource("LS_title")
 
-[node name="Subtitle" type="Label" parent="."]
+[node name="Subtitle" type="Label" parent="." unique_id=1058610409]
+layout_mode = 0
 offset_left = 76.0
 offset_top = 213.0
 offset_right = 570.0
@@ -86,22 +91,25 @@ offset_bottom = 255.0
 text = "TOWER DEFENCE"
 label_settings = SubResource("LS_subtitle")
 
-[node name="Tagline" type="Label" parent="."]
+[node name="Tagline" type="Label" parent="." unique_id=1261459909]
+layout_mode = 0
 offset_left = 78.0
 offset_top = 263.0
 offset_right = 570.0
 offset_bottom = 288.0
-text = "// AIR DEFENCE COMMAND SYSTEM"
+text = "Anti Air defence"
 label_settings = SubResource("LS_tagline")
 
-[node name="Separator" type="ColorRect" parent="."]
+[node name="Separator" type="ColorRect" parent="." unique_id=1909227787]
+layout_mode = 0
 offset_left = 70.0
 offset_top = 388.0
 offset_right = 1082.0
 offset_bottom = 390.0
 color = Color(0.29, 0.486, 0.145, 0.3)
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1137495542]
+layout_mode = 0
 offset_left = 70.0
 offset_top = 408.0
 offset_right = 1082.0
@@ -111,15 +119,17 @@ theme_override_styles/fill = SubResource("SBF_pbFill")
 show_percentage = false
 script = ExtResource("2_pbgd")
 
-[node name="TipLabel" type="Label" parent="."]
+[node name="TipLabel" type="Label" parent="." unique_id=1438268710]
+layout_mode = 0
 offset_left = 70.0
 offset_top = 458.0
 offset_right = 1082.0
 offset_bottom = 482.0
 text = "TIP: ..."
-label_settings = SubResource("LS_tip")
+label_settings = SubResource("LabelSettings_vjmxb")
 
-[node name="VersionLabel" type="Label" parent="."]
+[node name="VersionLabel" type="Label" parent="." unique_id=298532837]
+layout_mode = 0
 offset_left = 70.0
 offset_top = 612.0
 offset_right = 450.0
@@ -127,10 +137,13 @@ offset_bottom = 632.0
 text = "SAAW TOWER DEFENCE  |  v0.1 DEV BUILD"
 label_settings = SubResource("LS_version")
 
-[node name="FadeOverlay" type="ColorRect" parent="."]
+[node name="FadeOverlay" type="ColorRect" parent="." unique_id=1167030754]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0.0, 0.0, 0.0, 1.0)
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
+color = Color(0, 0, 0, 1)

@@ -1,13 +1,24 @@
-﻿[gd_scene format=3 uid="uid://553srrlrpt1l"]
+[gd_scene format=3 uid="uid://bl24tj8bl0sfh"]
 
-[ext_resource type="Script" uid="uid://c7dmrwz9hjn5y" path="res://main/main.gd" id="1_mgd"]
+[ext_resource type="Script" uid="uid://c7dmrw1ahjn5y" path="res://main/main.gd" id="1_mgd"]
+
+[sub_resource type="LabelSettings" id="LS_title"]
+font_size = 108
+font_color = Color(0.29, 0.486, 0.145, 1)
+
+[sub_resource type="LabelSettings" id="LS_subtitle"]
+font_size = 34
+font_color = Color(0.741, 0.765, 0.78, 1)
+
+[sub_resource type="LabelSettings" id="LS_tagline"]
+font_color = Color(0.275, 0.435, 0.188, 1)
 
 [sub_resource type="StyleBoxFlat" id="SBF_btnGN"]
 content_margin_left = 20.0
 content_margin_top = 10.0
 content_margin_right = 20.0
 content_margin_bottom = 10.0
-bg_color = Color(0.082, 0.168, 0.051, 1.0)
+bg_color = Color(0.082, 0.168, 0.051, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -18,28 +29,12 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
-[sub_resource type="StyleBoxFlat" id="SBF_btnGH"]
-content_margin_left = 20.0
-content_margin_top = 10.0
-content_margin_right = 20.0
-content_margin_bottom = 10.0
-bg_color = Color(0.122, 0.247, 0.075, 1.0)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.29, 0.486, 0.145, 1.0)
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-
 [sub_resource type="StyleBoxFlat" id="SBF_btnGP"]
 content_margin_left = 20.0
 content_margin_top = 10.0
 content_margin_right = 20.0
 content_margin_bottom = 10.0
-bg_color = Color(0.047, 0.098, 0.027, 1.0)
+bg_color = Color(0.047, 0.098, 0.027, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -50,12 +45,30 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
+[sub_resource type="StyleBoxFlat" id="SBF_btnGH"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.122, 0.247, 0.075, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.29, 0.486, 0.145, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxEmpty" id="SBF_focus"]
+
 [sub_resource type="StyleBoxFlat" id="SBF_btnRN"]
 content_margin_left = 20.0
 content_margin_top = 10.0
 content_margin_right = 20.0
 content_margin_bottom = 10.0
-bg_color = Color(0.169, 0.059, 0.059, 1.0)
+bg_color = Color(0.169, 0.059, 0.059, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -66,28 +79,12 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
-[sub_resource type="StyleBoxFlat" id="SBF_btnRH"]
-content_margin_left = 20.0
-content_margin_top = 10.0
-content_margin_right = 20.0
-content_margin_bottom = 10.0
-bg_color = Color(0.251, 0.086, 0.086, 1.0)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.753, 0.224, 0.169, 1.0)
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-
 [sub_resource type="StyleBoxFlat" id="SBF_btnRP"]
 content_margin_left = 20.0
 content_margin_top = 10.0
 content_margin_right = 20.0
 content_margin_bottom = 10.0
-bg_color = Color(0.098, 0.035, 0.035, 1.0)
+bg_color = Color(0.098, 0.035, 0.035, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -98,19 +95,21 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
-[sub_resource type="StyleBoxEmpty" id="SBF_focus"]
-
-[sub_resource type="LabelSettings" id="LS_title"]
-font_size = 108
-font_color = Color(0.29, 0.486, 0.145, 1.0)
-
-[sub_resource type="LabelSettings" id="LS_subtitle"]
-font_size = 34
-font_color = Color(0.741, 0.765, 0.78, 1.0)
-
-[sub_resource type="LabelSettings" id="LS_tagline"]
-font_size = 16
-font_color = Color(0.275, 0.435, 0.188, 1.0)
+[sub_resource type="StyleBoxFlat" id="SBF_btnRH"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.251, 0.086, 0.086, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.753, 0.224, 0.169, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 
 [sub_resource type="LabelSettings" id="LS_status"]
 font_size = 15
@@ -118,44 +117,51 @@ font_color = Color(0.275, 0.435, 0.188, 0.7)
 
 [sub_resource type="LabelSettings" id="LS_version"]
 font_size = 13
-font_color = Color(0.275, 0.36, 0.247, 1.0)
+font_color = Color(0.275, 0.36, 0.247, 1)
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=2077169234]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_mgd")
 
-[node name="BG" type="ColorRect" parent="."]
+[node name="BG" type="ColorRect" parent="." unique_id=1669745166]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0.051, 0.122, 0.059, 1.0)
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.051, 0.122, 0.059, 1)
 
-[node name="AccentTop" type="ColorRect" parent="."]
+[node name="AccentTop" type="ColorRect" parent="." unique_id=1927854874]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 2.0
 color = Color(0.29, 0.486, 0.145, 0.55)
 
-[node name="AccentBottom" type="ColorRect" parent="."]
+[node name="AccentBottom" type="ColorRect" parent="." unique_id=895509027]
 layout_mode = 1
-anchor_left = 0.0
+anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -2.0
 color = Color(0.29, 0.486, 0.145, 0.55)
 
-[node name="VerticalDivider" type="ColorRect" parent="."]
+[node name="VerticalDivider" type="ColorRect" parent="." unique_id=523042324]
+layout_mode = 0
 offset_left = 555.0
 offset_top = 30.0
 offset_right = 556.0
 offset_bottom = 618.0
 color = Color(0.29, 0.486, 0.145, 0.2)
 
-[node name="Title" type="Label" parent="."]
+[node name="Title" type="Label" parent="." unique_id=1604381719]
+layout_mode = 0
 offset_left = 70.0
 offset_top = 55.0
 offset_right = 540.0
@@ -163,7 +169,8 @@ offset_bottom = 180.0
 text = "SAAW"
 label_settings = SubResource("LS_title")
 
-[node name="Subtitle" type="Label" parent="."]
+[node name="Subtitle" type="Label" parent="." unique_id=1866810928]
+layout_mode = 0
 offset_left = 76.0
 offset_top = 178.0
 offset_right = 540.0
@@ -171,76 +178,93 @@ offset_bottom = 220.0
 text = "TOWER DEFENCE"
 label_settings = SubResource("LS_subtitle")
 
-[node name="Tagline" type="Label" parent="."]
+[node name="Tagline" type="Label" parent="." unique_id=538757694]
+layout_mode = 0
 offset_left = 78.0
 offset_top = 228.0
 offset_right = 540.0
 offset_bottom = 251.0
-text = "// AIR DEFENCE COMMAND SYSTEM v0.1"
+text = "Anti Air defence"
 label_settings = SubResource("LS_tagline")
 
-[node name="Separator" type="ColorRect" parent="."]
+[node name="Separator" type="ColorRect" parent="." unique_id=1123625411]
+layout_mode = 0
 offset_left = 70.0
 offset_top = 278.0
 offset_right = 540.0
 offset_bottom = 280.0
 color = Color(0.29, 0.486, 0.145, 0.35)
 
-[node name="DeployButton" type="Button" parent="."]
+[node name="DeployButton" type="Button" parent="." unique_id=1943171896]
+layout_mode = 0
 offset_left = 70.0
 offset_top = 296.0
 offset_right = 510.0
 offset_bottom = 352.0
-text = "  DEPLOY"
-theme_override_styles/normal = SubResource("SBF_btnGN")
-theme_override_styles/hover = SubResource("SBF_btnGH")
-theme_override_styles/pressed = SubResource("SBF_btnGP")
-theme_override_styles/focus = SubResource("SBF_focus")
-theme_override_colors/font_color = Color(0.29, 0.486, 0.145, 1.0)
-theme_override_colors/font_hover_color = Color(0.44, 0.71, 0.23, 1.0)
-theme_override_colors/font_pressed_color = Color(0.18, 0.31, 0.09, 1.0)
+theme_override_colors/font_color = Color(0.29, 0.486, 0.145, 1)
+theme_override_colors/font_pressed_color = Color(0.18, 0.31, 0.09, 1)
+theme_override_colors/font_hover_color = Color(0.44, 0.71, 0.23, 1)
 theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("SBF_btnGN")
+theme_override_styles/pressed = SubResource("SBF_btnGP")
+theme_override_styles/hover = SubResource("SBF_btnGH")
+theme_override_styles/focus = SubResource("SBF_focus")
+text = "Start"
 
-[node name="SettingsButton" type="Button" parent="."]
+[node name="SettingsButton" type="Button" parent="." unique_id=447485150]
+layout_mode = 0
 offset_left = 70.0
 offset_top = 368.0
 offset_right = 510.0
 offset_bottom = 424.0
-text = "  SETTINGS"
-theme_override_styles/normal = SubResource("SBF_btnGN")
-theme_override_styles/hover = SubResource("SBF_btnGH")
-theme_override_styles/pressed = SubResource("SBF_btnGP")
-theme_override_styles/focus = SubResource("SBF_focus")
-theme_override_colors/font_color = Color(0.29, 0.486, 0.145, 1.0)
-theme_override_colors/font_hover_color = Color(0.44, 0.71, 0.23, 1.0)
-theme_override_colors/font_pressed_color = Color(0.18, 0.31, 0.09, 1.0)
+theme_override_colors/font_color = Color(0.29, 0.486, 0.145, 1)
+theme_override_colors/font_pressed_color = Color(0.18, 0.31, 0.09, 1)
+theme_override_colors/font_hover_color = Color(0.44, 0.71, 0.23, 1)
 theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("SBF_btnGN")
+theme_override_styles/pressed = SubResource("SBF_btnGP")
+theme_override_styles/hover = SubResource("SBF_btnGH")
+theme_override_styles/focus = SubResource("SBF_focus")
+text = "Settings"
 
-[node name="AbortButton" type="Button" parent="."]
+[node name="AbortButton" type="Button" parent="." unique_id=282283821]
+layout_mode = 0
 offset_left = 70.0
 offset_top = 440.0
 offset_right = 510.0
 offset_bottom = 496.0
-text = "  ABORT MISSION"
-theme_override_styles/normal = SubResource("SBF_btnRN")
-theme_override_styles/hover = SubResource("SBF_btnRH")
-theme_override_styles/pressed = SubResource("SBF_btnRP")
-theme_override_styles/focus = SubResource("SBF_focus")
-theme_override_colors/font_color = Color(0.753, 0.224, 0.169, 1.0)
-theme_override_colors/font_hover_color = Color(0.88, 0.29, 0.22, 1.0)
-theme_override_colors/font_pressed_color = Color(0.5, 0.15, 0.12, 1.0)
+theme_override_colors/font_color = Color(0.753, 0.224, 0.169, 1)
+theme_override_colors/font_pressed_color = Color(0.5, 0.15, 0.12, 1)
+theme_override_colors/font_hover_color = Color(0.88, 0.29, 0.22, 1)
 theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("SBF_btnRN")
+theme_override_styles/pressed = SubResource("SBF_btnRP")
+theme_override_styles/hover = SubResource("SBF_btnRH")
+theme_override_styles/focus = SubResource("SBF_focus")
+text = "Exit"
 
-[node name="StatusLabel" type="Label" parent="."]
+[node name="Github" type="Label" parent="." unique_id=299251057]
+layout_mode = 0
 offset_left = 575.0
 offset_top = 55.0
 offset_right = 1080.0
 offset_bottom = 75.0
-text = "[ SYSTEM STATUS: STANDBY ]"
+text = "[ Github: https://github.com/Welloty/saawtd ]"
 label_settings = SubResource("LS_status")
 horizontal_alignment = 1
 
-[node name="VersionLabel" type="Label" parent="."]
+[node name="GithubLink" type="LinkButton" parent="Github" unique_id=729937652]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+offset_left = 87.0
+offset_top = 4.0
+offset_right = 397.41605
+offset_bottom = 23.0
+uri = "https://github.com/Welloty/saawtd"
+
+[node name="VersionLabel" type="Label" parent="." unique_id=2000052620]
+layout_mode = 0
 offset_left = 70.0
 offset_top = 612.0
 offset_right = 540.0
@@ -248,13 +272,56 @@ offset_bottom = 632.0
 text = "SAAW TOWER DEFENCE  |  v0.1 DEV BUILD"
 label_settings = SubResource("LS_version")
 
-[node name="FadeOverlay" type="ColorRect" parent="."]
+[node name="FadeOverlay" type="ColorRect" parent="." unique_id=1237362566]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0.0, 0.0, 0.0, 1.0)
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Discord" type="Label" parent="." unique_id=63998221]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 80.0
+offset_right = 1080.0
+offset_bottom = 102.0
+text = "[ Discord: https://discord.gg/bp9hN9rN4N ]"
+label_settings = SubResource("LS_status")
+horizontal_alignment = 1
+
+[node name="DiscordLink" type="LinkButton" parent="Discord" unique_id=1889831105]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+offset_left = 87.0
+offset_top = 3.0
+offset_right = 397.41605
+offset_bottom = 22.0
+uri = "https://discord.gg/bp9hN9rN4N"
+
+[node name="Telegram" type="Label" parent="." unique_id=720527111]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 105.0
+offset_right = 1080.0
+offset_bottom = 127.0
+text = "[ Telegram: https://t.me/saawtd ]"
+label_settings = SubResource("LS_status")
+horizontal_alignment = 1
+
+[node name="TelegramLink" type="LinkButton" parent="Telegram" unique_id=329433732]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+offset_left = 87.0
+offset_top = 3.0
+offset_right = 397.41605
+offset_bottom = 22.0
+uri = "https://t.me/saawtd"
 
 [connection signal="pressed" from="DeployButton" to="." method="_on_deploy_pressed"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_pressed"]

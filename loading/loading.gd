@@ -1,4 +1,4 @@
-﻿extends Control
+extends Control
 
 @onready var fade_overlay: ColorRect = $FadeOverlay
 @onready var title_label: Label = $Title
@@ -7,12 +7,12 @@
 @onready var tip_label: Label = $TipLabel
 
 var tips: Array[String] = [
-	"Position SAM sites on high ground for maximum radar coverage.",
-	"Different missile types counter different threat profiles. Mix your arsenal.",
-	"Radar detection range determines your reaction time. Protect it at all costs.",
-	"Concentrate fire on priority targets before they breach the perimeter.",
-	"Low-flying UAVs can evade long-range radar. Deploy mobile interceptors.",
-	"Overlapping coverage zones eliminate blind spots in your air defence.",
+	"Join our Discord.",
+	"You can modify the game using the code on GitHub.",
+	"We have our own Telegram channel.",
+	"Enjoy the game!",
+	"Please write reviews for the game; it helps us.",
+	"Improve your air defense.",
 ]
 
 func _ready() -> void:
