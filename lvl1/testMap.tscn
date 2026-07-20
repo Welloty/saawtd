@@ -2,16 +2,20 @@
 
 [ext_resource type="PackedScene" uid="uid://be0cqux4roovw" path="res://lvl1/drone.tscn" id="2_jet0j"]
 [ext_resource type="Texture2D" uid="uid://djrtdu2nuo04g" path="res://lvl1/texture/lvl1map.jpg" id="3_cgmex"]
-<<<<<<< Updated upstream
-=======
 [ext_resource type="PackedScene" uid="uid://b6xhhtq2mybge" path="res://lvl1/fpv.tscn" id="5_lyu8i"]
->>>>>>> Stashed changes
+[ext_resource type="PackedScene" path="res://lvl1/pause_menu.tscn" id="6_pause"]
 
 [sub_resource type="Curve2D" id="Curve2D_hd237"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 284, 255, 0, 0, 0, 0, 436, 403.6803, 0, 0, 0, 0, 528, 407.0855, 0, 0, 0, 0, 613, 396.0186, 0, 0, 0, 0, 689, 363.66916, 0, 0, 0, 0, 709, 298.11896, 0, 0, 0, 0, 715, 183.19331, 0, 0, 0, 0, 752, 119.345726, 0, 0, 0, 0, 837, 83.59108, 0, 0, 0, 0, 934, 129.56134, 0, 0, 0, 0, 1023, 178.08551, 0, 0, 0, 0, 1034, 218.94797, 0, 0, 0, 0, 994, 309.18588, 0, 0, 0, 0, 1013, 364.52045, 0, 0, 0, 0, 969, 428.36804, 0, 0, 0, 0, 842.1167, 439.13077, 0, 0, 0, 0, 734, 515.20074, 0, 0, 0, 0, 618, 560.3197, 0, 0, 0, 0, 429, 535.63196, 0, 0, 0, 0, 160.3961, 416.34232, 0, 0, 0, 0, 124.08, 355.8168, 0, 0, 0, 0, 143.24683, 265.02847, 0, 0, 0, 0, 263.4841, 252.9564)
 }
 point_count = 23
+
+[sub_resource type="Curve2D" id="Curve2D_lyu8i"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 181, 11, 0, 0, 0, 0, 238, 101, 0, 0, 0, 0, 373, 120, 0, 0, 0, 0, 453, 158, 0, 0, 0, 0, 502, 164, 0, 0, 0, 0, 549, 196, 0, 0, 0, 0, 565, 249, 0, 0, 0, 0, 592, 124, 0, 0, 0, 0, 454, 45, 0, 0, 0, 0, 389, 39, 0, 0, 0, 0, 333, 95, 0, 0, 0, 0, 269, 71, 0, 0, 0, 0, 234, 8, 0, 0, 0, 0, 189, 10)
+}
+point_count = 14
 
 [node name="testMap" type="Node2D" unique_id=365493064]
 
@@ -34,16 +38,23 @@ show_behind_parent = true
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("3_cgmex")
-<<<<<<< Updated upstream
-=======
 
 [node name="fpvdrun" type="Path2D" parent="." unique_id=737667049]
 curve = SubResource("Curve2D_lyu8i")
 
 [node name="fpvdrunfollow" type="PathFollow2D" parent="fpvdrun" unique_id=1071959081]
-position = Vector2(185, 6)
-rotation = 1.3866326
+position = Vector2(181, 11)
+rotation = 1.0062269
 
 [node name="Fpv" parent="." unique_id=2064926873 node_paths=PackedStringArray("path_follower") instance=ExtResource("5_lyu8i")]
 path_follower = NodePath("../fpvdrun/fpvdrunfollow")
->>>>>>> Stashed changes
+
+[node name="PauseMenu" parent="." unique_id=1536623147 instance=ExtResource("6_pause")]
+
+[node name="Label" type="Label" parent="." unique_id=1461309047]
+offset_left = 2.0
+offset_top = 630.0
+offset_right = 198.0
+offset_bottom = 653.0
+scale = Vector2(0.65, 0.65)
+text = "Map creator: Daniel Cook"

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b6xhhtq2mybge"]
 
-[ext_resource type="Script" uid="uid://bm3ecs0kqw4gx" path="res://lvl1/fpv.gd" id="1_168kf"]
+[ext_resource type="Script" uid="uid://dy386d2i4f8uv" path="res://lvl1/fpv.gd" id="1_168kf"]
 [ext_resource type="Texture2D" uid="uid://dif0gabvyljce" path="res://lvl1/texture/fpv-drone.png" id="1_f25y8"]
 [ext_resource type="Texture2D" uid="uid://3uonglstyfmi" path="res://lvl1/texture/propeller.png" id="2_xja3k"]
 
