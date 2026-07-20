@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b6xhhtq2mybge"]
+
+[ext_resource type="Texture2D" uid="uid://dpsidukuelnoq" path="res://lvl1/texture/fpv-drone.png" id="1_f25y8"]
+
+[node name="Fpv" type="Node2D" unique_id=438851]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=671909067]
+texture = ExtResource("1_f25y8")

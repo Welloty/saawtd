@@ -3,9 +3,8 @@
 [ext_resource type="Script" uid="uid://yv6ffxktuech" path="res://lvl1/drone.gd" id="1_d5du7"]
 [ext_resource type="Texture2D" uid="uid://cq1hwoiptjvf1" path="res://lvl1/texture/Drone.png" id="2_g5748"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ifeun"]
-radius = 114.0
-height = 270.0
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_050d1"]
+points = PackedVector2Array(92.00001, 100.99999, 92, 62.999996, 54, 4.9999976, 54, -1.0000024, 16.999998, -49, 10.999997, -57, 10.999996, -96, 8.999995, -113, 3.9999945, -125, -5.0000052, -125, -12.000005, -110, -14.000003, -58, -51, -0.9999978, -53, -0.9999977, -52, -25.999998, -58, -25.999998, -58, 8.000003, -95, 62.000004, -95.99999, 101.00001, -90.99999, 101.00001, -88.99999, 96.00001, -23.999996, 95, -15.999996, 90, -12.999996, 90, -12.999995, 99, -12.999995, 102, -29.999996, 102, -29.999996, 105, 28.000004, 105, 29.000004, 102, 11.000005, 102, 12.000004, 97, 10.000004, 97, 12.000004, 87, 16.000004, 86, 19.000004, 95, 88.00001, 95.99999, 88.00001, 100.99999)
 
 [node name="Drone" type="CharacterBody2D" unique_id=1354707800]
 script = ExtResource("1_d5du7")
@@ -16,4 +15,4 @@ texture = ExtResource("2_g5748")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=996383420]
 rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_ifeun")
+shape = SubResource("ConvexPolygonShape2D_050d1")

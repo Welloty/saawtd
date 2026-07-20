@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://ci4vl08fuctkj" path="res://icon.svg" id="1_mvlbn"]
 [ext_resource type="PackedScene" uid="uid://be0cqux4roovw" path="res://lvl1/drone.tscn" id="2_jet0j"]
 [ext_resource type="Texture2D" uid="uid://djrtdu2nuo04g" path="res://lvl1/texture/lvl1map.jpg" id="3_cgmex"]
+[ext_resource type="Script" uid="uid://bm3ecs0kqw4gx" path="res://lvl1/fpv.gd" id="5_evo85"]
+[ext_resource type="PackedScene" uid="uid://b6xhhtq2mybge" path="res://lvl1/fpv.tscn" id="5_lyu8i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rnrx8"]
 texture = ExtResource("1_mvlbn")
@@ -83,6 +85,12 @@ _data = {
 }
 point_count = 23
 
+[sub_resource type="Curve2D" id="Curve2D_lyu8i"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 185, 6, 0, 0, 0, 0, 204, 108, 0, 0, 0, 0, 301, 136, 0, 0, 0, 0, 431, 194, 0, 0, 0, 0, 486, 303, 0, 0, 0, 0, 613, 272, 0, 0, 0, 0, 633, 109, 0, 0, 0, 0, 604, 26, 0, 0, 0, 0, 208, 10)
+}
+point_count = 9
+
 [node name="testMap" type="Node2D" unique_id=365493064]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=753051501]
@@ -107,3 +115,16 @@ show_behind_parent = true
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("3_cgmex")
+
+[node name="fpvdrun" type="Path2D" parent="." unique_id=737667049]
+curve = SubResource("Curve2D_lyu8i")
+
+[node name="fpvdrunfollow" type="PathFollow2D" parent="fpvdrun" unique_id=1071959081]
+position = Vector2(185, 6)
+rotation = 1.3866326
+
+[node name="fpv" type="CharacterBody2D" parent="." unique_id=1044002851 node_paths=PackedStringArray("path_follower")]
+script = ExtResource("5_evo85")
+path_follower = NodePath("../fpvdrun/fpvdrunfollow")
+
+[node name="Fpv" parent="fpv" unique_id=438851 instance=ExtResource("5_lyu8i")]
