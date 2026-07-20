@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b6xhhtq2mybge"]
+
+[ext_resource type="Script" uid="uid://bm3ecs0kqw4gx" path="res://lvl1/fpv.gd" id="1_168kf"]
+[ext_resource type="Texture2D" uid="uid://dif0gabvyljce" path="res://lvl1/texture/fpv-drone.png" id="1_f25y8"]
+[ext_resource type="Texture2D" uid="uid://3uonglstyfmi" path="res://lvl1/texture/propeller.png" id="2_xja3k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xja3k"]
+size = Vector2(53, 40)
+
+[node name="Fpv" type="CharacterBody2D" unique_id=2064926873]
+script = ExtResource("1_168kf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1590518566]
+rotation = -1.5707964
+texture = ExtResource("1_f25y8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1397500985]
+visible = false
+position = Vector2(-2.5, 0)
+shape = SubResource("RectangleShape2D_xja3k")
+
+[node name="Propeller" type="Sprite2D" parent="." unique_id=801303031]
+position = Vector2(-21, -18)
+texture = ExtResource("2_xja3k")
+
+[node name="Propeller2" type="Sprite2D" parent="." unique_id=604110460]
+position = Vector2(-21, 18)
+texture = ExtResource("2_xja3k")
+
+[node name="Propeller3" type="Sprite2D" parent="." unique_id=1549589157]
+position = Vector2(17, 18)
+texture = ExtResource("2_xja3k")
+
+[node name="Propeller4" type="Sprite2D" parent="." unique_id=681744558]
+position = Vector2(17, -18)
+texture = ExtResource("2_xja3k")

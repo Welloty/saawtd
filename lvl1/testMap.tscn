@@ -1,81 +1,11 @@
 [gd_scene format=3 uid="uid://bgkw2aevbtbpu"]
 
-[ext_resource type="Texture2D" uid="uid://ci4vl08fuctkj" path="res://icon.svg" id="1_mvlbn"]
 [ext_resource type="PackedScene" uid="uid://be0cqux4roovw" path="res://lvl1/drone.tscn" id="2_jet0j"]
 [ext_resource type="Texture2D" uid="uid://djrtdu2nuo04g" path="res://lvl1/texture/lvl1map.jpg" id="3_cgmex"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rnrx8"]
-texture = ExtResource("1_mvlbn")
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-7:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-7:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-6:5/0 = 0
-7:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-6:6/0 = 0
-7:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-7:7/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_ifeun"]
-physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_rnrx8")
+<<<<<<< Updated upstream
+=======
+[ext_resource type="PackedScene" uid="uid://b6xhhtq2mybge" path="res://lvl1/fpv.tscn" id="5_lyu8i"]
+>>>>>>> Stashed changes
 
 [sub_resource type="Curve2D" id="Curve2D_hd237"]
 _data = {
@@ -84,9 +14,6 @@ _data = {
 point_count = 23
 
 [node name="testMap" type="Node2D" unique_id=365493064]
-
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=753051501]
-tile_set = SubResource("TileSet_ifeun")
 
 [node name="Drone" parent="." unique_id=1354707800 node_paths=PackedStringArray("path_follower") instance=ExtResource("2_jet0j")]
 position = Vector2(222, 256.00003)
@@ -107,3 +34,16 @@ show_behind_parent = true
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("3_cgmex")
+<<<<<<< Updated upstream
+=======
+
+[node name="fpvdrun" type="Path2D" parent="." unique_id=737667049]
+curve = SubResource("Curve2D_lyu8i")
+
+[node name="fpvdrunfollow" type="PathFollow2D" parent="fpvdrun" unique_id=1071959081]
+position = Vector2(185, 6)
+rotation = 1.3866326
+
+[node name="Fpv" parent="." unique_id=2064926873 node_paths=PackedStringArray("path_follower") instance=ExtResource("5_lyu8i")]
+path_follower = NodePath("../fpvdrun/fpvdrunfollow")
+>>>>>>> Stashed changes
