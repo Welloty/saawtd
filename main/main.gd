@@ -49,8 +49,8 @@ func _on_btn_exited(btn: Button) -> void:
 	tween.tween_property(btn, "position:x", _base_x[btn], 0.15).set_ease(Tween.EASE_OUT)
 
 func _on_deploy_pressed() -> void:
-	# TODO: Change to actual game scene path when ready
-	_fade_and_go("res://main/main.tscn")
+	#lvl 1
+	_fade_and_go("res://lvl1/testMap.tscn")
 
 func _on_settings_pressed() -> void:
 	_update_language_dropdown()

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bl24tj8bl0sfh"]
 
 [ext_resource type="Script" uid="uid://c7dmrw1ahjn5y" path="res://main/main.gd" id="1_mgd"]
+[ext_resource type="Texture2D" uid="uid://cq1hwoiptjvf1" path="res://lvl1/texture/Drone.png" id="2_pjrb6"]
 
 [sub_resource type="LabelSettings" id="LS_title"]
 font_size = 108
@@ -444,6 +445,16 @@ offset_top = 3.0
 offset_right = 397.41605
 offset_bottom = 22.0
 uri = "https://t.me/saawtd"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=515712540]
+layout_mode = 0
+offset_left = 766.0
+offset_top = 238.0
+offset_right = 1020.5453
+offset_bottom = 539.8451
+rotation = 0.58119464
+scale = Vector2(0.605, 0.605)
+texture = ExtResource("2_pjrb6")
 
 [connection signal="pressed" from="DeployButton" to="." method="_on_deploy_pressed"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_pressed"]

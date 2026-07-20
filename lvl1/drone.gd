@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed: float = 150
+@export var speed: float = 100
 @export var path_follower: PathFollow2D
 
 func _physics_process(delta: float) -> void:
