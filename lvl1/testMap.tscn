@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://djrtdu2nuo04g" path="res://lvl1/texture/lvl1map.jpg" id="3_cgmex"]
 [ext_resource type="PackedScene" uid="uid://b6xhhtq2mybge" path="res://lvl1/fpv.tscn" id="5_lyu8i"]
 [ext_resource type="PackedScene" path="res://lvl1/pause_menu.tscn" id="6_pause"]
+[ext_resource type="PackedScene" path="res://lvl1/hud.tscn" id="7_hud"]
 
 [sub_resource type="Curve2D" id="Curve2D_hd237"]
 _data = {
@@ -48,6 +49,8 @@ rotation = 1.0062269
 
 [node name="Fpv" parent="." unique_id=2064926873 node_paths=PackedStringArray("path_follower") instance=ExtResource("5_lyu8i")]
 path_follower = NodePath("../fpvdrun/fpvdrunfollow")
+
+[node name="HUD" parent="." instance=ExtResource("7_hud")]
 
 [node name="PauseMenu" parent="." unique_id=1536623147 instance=ExtResource("6_pause")]
 

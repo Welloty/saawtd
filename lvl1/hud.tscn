@@ -1,0 +1,183 @@
+[gd_scene format=3 uid="uid://bse3nc3j0q25n"]
+
+[ext_resource type="Script" uid="uid://c15ihusqcgh2i" path="res://lvl1/hud.gd" id="1_hud"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+content_margin_left = 14.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.063, 0.133, 0.071, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.29, 0.486, 0.145, 0.75)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_badge_money"]
+content_margin_left = 8.0
+content_margin_top = 2.0
+content_margin_right = 8.0
+content_margin_bottom = 2.0
+bg_color = Color(0.122, 0.247, 0.075, 0.9)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.44, 0.71, 0.23, 0.8)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="LabelSettings" id="LS_badge_money"]
+font_color = Color(0.44, 0.71, 0.23, 1)
+
+[sub_resource type="LabelSettings" id="LS_header"]
+font_size = 11
+font_color = Color(0.741, 0.765, 0.78, 0.75)
+
+[sub_resource type="LabelSettings" id="LS_value_money"]
+font_size = 18
+font_color = Color(0.44, 0.71, 0.23, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_badge_wave"]
+content_margin_left = 8.0
+content_margin_top = 2.0
+content_margin_right = 8.0
+content_margin_bottom = 2.0
+bg_color = Color(0.082, 0.168, 0.051, 0.9)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.29, 0.486, 0.145, 0.8)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="LabelSettings" id="LS_badge_wave"]
+font_color = Color(0.29, 0.486, 0.145, 1)
+
+[sub_resource type="LabelSettings" id="LS_value_wave"]
+font_size = 18
+font_color = Color(0.741, 0.765, 0.78, 1)
+
+[node name="HUD" type="CanvasLayer" unique_id=1855121295]
+script = ExtResource("1_hud")
+
+[node name="Control" type="Control" parent="." unique_id=1637057291]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TopAccent" type="ColorRect" parent="Control" unique_id=1824846959]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+mouse_filter = 2
+color = Color(0.29, 0.486, 0.145, 0.45)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=984802702]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 14.0
+offset_right = 400.0
+offset_bottom = 70.0
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer" unique_id=506367291]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="MoneyPanel" type="PanelContainer" parent="Control/MarginContainer/HBoxContainer" unique_id=782984257]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/HBoxContainer/MoneyPanel" unique_id=1913466316]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Badge" type="PanelContainer" parent="Control/MarginContainer/HBoxContainer/MoneyPanel/HBoxContainer" unique_id=2147021923]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_badge_money")
+
+[node name="IconLabel" type="Label" parent="Control/MarginContainer/HBoxContainer/MoneyPanel/HBoxContainer/Badge" unique_id=1996250947]
+layout_mode = 2
+text = "$"
+label_settings = SubResource("LS_badge_money")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/HBoxContainer/MoneyPanel/HBoxContainer" unique_id=987612526]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = -2
+alignment = 1
+
+[node name="HeaderLabel" type="Label" parent="Control/MarginContainer/HBoxContainer/MoneyPanel/HBoxContainer/VBoxContainer" unique_id=1221079937]
+layout_mode = 2
+text = "Money"
+label_settings = SubResource("LS_header")
+
+[node name="MoneyValueLabel" type="Label" parent="Control/MarginContainer/HBoxContainer/MoneyPanel/HBoxContainer/VBoxContainer" unique_id=946326884]
+layout_mode = 2
+text = "1000$"
+label_settings = SubResource("LS_value_money")
+
+[node name="WavePanel" type="PanelContainer" parent="Control/MarginContainer/HBoxContainer" unique_id=1988131225]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/HBoxContainer/WavePanel" unique_id=2033498671]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Badge" type="PanelContainer" parent="Control/MarginContainer/HBoxContainer/WavePanel/HBoxContainer" unique_id=1784268686]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_badge_wave")
+
+[node name="IconLabel" type="Label" parent="Control/MarginContainer/HBoxContainer/WavePanel/HBoxContainer/Badge" unique_id=978722783]
+layout_mode = 2
+text = "W"
+label_settings = SubResource("LS_badge_wave")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/HBoxContainer/WavePanel/HBoxContainer" unique_id=1324884871]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = -2
+alignment = 1
+
+[node name="HeaderLabel" type="Label" parent="Control/MarginContainer/HBoxContainer/WavePanel/HBoxContainer/VBoxContainer" unique_id=1430790966]
+layout_mode = 2
+text = "Wave"
+label_settings = SubResource("LS_header")
+
+[node name="WaveValueLabel" type="Label" parent="Control/MarginContainer/HBoxContainer/WavePanel/HBoxContainer/VBoxContainer" unique_id=107076028]
+layout_mode = 2
+text = "1 / 10"
+label_settings = SubResource("LS_value_wave")
