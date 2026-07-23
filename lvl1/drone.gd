@@ -4,6 +4,9 @@ extends CharacterBody2D
 @export var max_health: float = 80.0
 @export var reward_money: int = 20
 @export var path_follower: PathFollow2D
+@export var sun_direction := Vector2(15, 20)
+@onready var shadow_sprite: Sprite2D = $Shadow
+
 
 var health: float = 80.0
 
@@ -17,6 +20,10 @@ func _exit_tree() -> void:
 func _cleanup_path_follower() -> void:
 	if is_instance_valid(path_follower):
 		path_follower.queue_free()
+
+func _process(_delta: float) -> void:
+	shadow_sprite.global_rotation = global_rotation + deg_to_rad(90)
+	shadow_sprite.global_position = global_position + sun_direction
 
 func _physics_process(delta: float) -> void:
 	if not is_instance_valid(path_follower):
