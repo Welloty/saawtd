@@ -17,6 +17,7 @@ func _process(delta: float) -> void:
 func _finish_loading() -> void:
 	var fade_overlay := get_parent().find_child("FadeOverlay") as ColorRect
 	if fade_overlay:
+		fade_overlay.visible = true
 		var tween := create_tween()
 		tween.tween_property(fade_overlay, "modulate:a", 1.0, 0.8).set_ease(Tween.EASE_IN)
 		await tween.finished

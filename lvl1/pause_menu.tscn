@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://pause_menu_lvl1"]
+[gd_scene format=3 uid="uid://bbsrj0i7up6bm"]
 
-[ext_resource type="Script" path="res://lvl1/pause_menu.gd" id="1_pm"]
+[ext_resource type="Script" uid="uid://wlvx2fwjaiba" path="res://lvl1/pause_menu.gd" id="1_pm"]
 
 [sub_resource type="StyleBoxFlat" id="SBF_panel"]
 bg_color = Color(0.063, 0.133, 0.071, 1)
@@ -116,33 +116,29 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
-[node name="PauseMenu" type="CanvasLayer"]
+[node name="PauseMenu" type="CanvasLayer" unique_id=2047928806]
 process_mode = 3
 script = ExtResource("1_pm")
 
-[node name="FadeOverlay" type="ColorRect" parent="."]
+[node name="FadeOverlay" type="ColorRect" parent="." unique_id=896561137]
 visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 0
-color = Color(0, 0, 0, 1)
 z_index = 10
-
-[node name="Overlay" type="ColorRect" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 0
+color = Color(0, 0, 0, 1)
+
+[node name="Overlay" type="ColorRect" parent="." unique_id=200416150]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 0.6)
 
-[node name="Panel" type="Panel" parent="Overlay"]
+[node name="Panel" type="Panel" parent="Overlay" unique_id=79097300]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -157,7 +153,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("SBF_panel")
 
-[node name="Title" type="Label" parent="Overlay/Panel"]
+[node name="Title" type="Label" parent="Overlay/Panel" unique_id=953880289]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -172,7 +168,7 @@ label_settings = SubResource("LS_title")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Separator" type="ColorRect" parent="Overlay/Panel"]
+[node name="Separator" type="ColorRect" parent="Overlay/Panel" unique_id=1629949181]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -184,7 +180,7 @@ offset_bottom = 74.0
 grow_horizontal = 2
 color = Color(0.29, 0.486, 0.145, 0.35)
 
-[node name="VBox" type="VBoxContainer" parent="Overlay/Panel"]
+[node name="VBox" type="VBoxContainer" parent="Overlay/Panel" unique_id=913424681]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -199,8 +195,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 12
 
-[node name="ResumeButton" type="Button" parent="Overlay/Panel/VBox"]
+[node name="ResumeButton" type="Button" parent="Overlay/Panel/VBox" unique_id=420078349]
 custom_minimum_size = Vector2(310, 48)
+layout_mode = 2
 theme_override_colors/font_color = Color(0.29, 0.486, 0.145, 1)
 theme_override_colors/font_pressed_color = Color(0.18, 0.31, 0.09, 1)
 theme_override_colors/font_hover_color = Color(0.44, 0.71, 0.23, 1)
@@ -211,8 +208,9 @@ theme_override_styles/hover = SubResource("SBF_btnGH")
 theme_override_styles/focus = SubResource("SBF_focus")
 text = "Resume"
 
-[node name="MenuButton" type="Button" parent="Overlay/Panel/VBox"]
+[node name="MenuButton" type="Button" parent="Overlay/Panel/VBox" unique_id=1120222446]
 custom_minimum_size = Vector2(310, 48)
+layout_mode = 2
 theme_override_colors/font_color = Color(0.753, 0.224, 0.169, 1)
 theme_override_colors/font_pressed_color = Color(0.5, 0.15, 0.12, 1)
 theme_override_colors/font_hover_color = Color(0.88, 0.29, 0.22, 1)

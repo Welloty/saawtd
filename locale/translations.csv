@@ -6,12 +6,12 @@ Language,Language,Язык
 Close,Close,Закрыть
 Back,Back,Назад
 "Anti Air defence","Anti-Air Defense","Противовоздушная оборона"
-TIP_PREFIX,"TIP:  ","СОВЕТ:  "
+TIP_PREFIX,"Tip:  ","Совет:  "
 "Join our Discord.","Join our Discord.","Присоединяйтесь к нашему Discord."
 "You can modify the game using the code on GitHub.","You can modify the game using the code on GitHub.","Вы можете изменить игру, используя исходный код на GitHub."
 "We have our own Telegram channel.","We have our own Telegram channel.","У нас есть собственный Telegram-канал."
 "Enjoy the game!","Enjoy the game!","Приятной игры!"
 "Please write reviews for the game; it helps us.","Please write reviews for the game; it helps us.","Пожалуйста, пишите отзывы об игре; это очень помогает нам."
 "Improve your air defense.","Improve your air defense.","Улучшайте свою противовоздушную оборону."
-MONEY,MONEY,ДЕНЬГИ
-WAVE,WAVE,ВОЛНА
+MONEY,Money,Деньги
+WAVE,Wave,Волна

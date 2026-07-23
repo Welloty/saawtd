@@ -16,6 +16,7 @@ var tips: Array[String] = [
 ]
 
 func _ready() -> void:
+	fade_overlay.visible = true
 	fade_overlay.modulate.a = 1.0
 	title_label.modulate.a = 0.0
 	subtitle_label.modulate.a = 0.0

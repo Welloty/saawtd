@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bgkw2aevbtbpu"]
 
-[ext_resource type="PackedScene" uid="uid://be0cqux4roovw" path="res://lvl1/drone.tscn" id="2_jet0j"]
 [ext_resource type="Texture2D" uid="uid://djrtdu2nuo04g" path="res://lvl1/texture/lvl1map.jpg" id="3_cgmex"]
-[ext_resource type="PackedScene" uid="uid://b6xhhtq2mybge" path="res://lvl1/fpv.tscn" id="5_lyu8i"]
 [ext_resource type="PackedScene" path="res://lvl1/pause_menu.tscn" id="6_pause"]
 [ext_resource type="PackedScene" path="res://lvl1/hud.tscn" id="7_hud"]
+[ext_resource type="Script" path="res://lvl1/pvo_placement_manager.gd" id="8_placement"]
+[ext_resource type="Script" path="res://lvl1/wave_manager.gd" id="9_wave_mgr"]
 
 [sub_resource type="Curve2D" id="Curve2D_hd237"]
 _data = {
@@ -20,35 +20,27 @@ point_count = 14
 
 [node name="testMap" type="Node2D" unique_id=365493064]
 
-[node name="Drone" parent="." unique_id=1354707800 node_paths=PackedStringArray("path_follower") instance=ExtResource("2_jet0j")]
-position = Vector2(222, 256.00003)
-scale = Vector2(0.4, 0.4)
-path_follower = NodePath("../Path2D/PathFollow2D")
-
-[node name="Path2D" type="Path2D" parent="." unique_id=1752817380]
-position = Vector2(-2.0175145, -0.045894455)
-scale = Vector2(1.0058197, 1.1387175)
-curve = SubResource("Curve2D_hd237")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=290861124]
-position = Vector2(284, 255)
-rotation = 0.774358
-
 [node name="TextureRect" type="TextureRect" parent="." unique_id=14431680]
 show_behind_parent = true
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("3_cgmex")
 
+[node name="Path2D" type="Path2D" parent="." unique_id=1752817380]
+position = Vector2(-2.0175145, -0.045894455)
+scale = Vector2(1.0058197, 1.1387175)
+curve = SubResource("Curve2D_hd237")
+
 [node name="fpvdrun" type="Path2D" parent="." unique_id=737667049]
 curve = SubResource("Curve2D_lyu8i")
 
-[node name="fpvdrunfollow" type="PathFollow2D" parent="fpvdrun" unique_id=1071959081]
-position = Vector2(181, 11)
-rotation = 1.0062269
+[node name="TowersContainer" type="Node2D" parent="." unique_id=99001122]
 
-[node name="Fpv" parent="." unique_id=2064926873 node_paths=PackedStringArray("path_follower") instance=ExtResource("5_lyu8i")]
-path_follower = NodePath("../fpvdrun/fpvdrunfollow")
+[node name="PvoPlacementManager" type="Node2D" parent="." unique_id=99001123]
+script = ExtResource("8_placement")
+
+[node name="WaveManager" type="Node2D" parent="." unique_id=99001124]
+script = ExtResource("9_wave_mgr")
 
 [node name="HUD" parent="." instance=ExtResource("7_hud")]
 
