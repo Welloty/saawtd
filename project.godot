@@ -18,11 +18,13 @@ config/icon="res://loading/icon.svg"
 [autoload]
 
 SettingsManager="*res://settings_manager.gd"
+Global="*uid://bvvb3ymjcjkru"
 
 [display]
 
+window/size/mode=2
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/stretch/aspect="ignore"
 
 [internationalization]
 

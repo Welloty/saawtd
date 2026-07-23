@@ -3,8 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://djrtdu2nuo04g" path="res://lvl1/texture/lvl1map.jpg" id="3_cgmex"]
 [ext_resource type="PackedScene" path="res://lvl1/pause_menu.tscn" id="6_pause"]
 [ext_resource type="PackedScene" path="res://lvl1/hud.tscn" id="7_hud"]
-[ext_resource type="Script" path="res://lvl1/pvo_placement_manager.gd" id="8_placement"]
-[ext_resource type="Script" path="res://lvl1/wave_manager.gd" id="9_wave_mgr"]
 
 [sub_resource type="Curve2D" id="Curve2D_hd237"]
 _data = {
@@ -42,7 +40,7 @@ script = ExtResource("8_placement")
 [node name="WaveManager" type="Node2D" parent="." unique_id=99001124]
 script = ExtResource("9_wave_mgr")
 
-[node name="HUD" parent="." instance=ExtResource("7_hud")]
+[node name="HUD" parent="." unique_id=1870249777 instance=ExtResource("7_hud")]
 
 [node name="PauseMenu" parent="." unique_id=1536623147 instance=ExtResource("6_pause")]
 
